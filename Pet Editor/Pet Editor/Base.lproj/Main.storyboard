@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HXp-Ac-FC3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2lX-U4-OZH">
+            <objects>
+                <viewController id="HXp-Ac-FC3" customClass="ViewController" customModule="Pet_Editor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lnJ-O7-tny"/>
+                        <viewControllerLayoutGuide type="bottom" id="fcN-YS-fhQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iNP-Px-3wG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pnH-AG-QcI">
+                                <rect key="frame" x="16" y="20" width="343" height="637"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Snow White" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8XB-6f-Vyd">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameTextFieldChanged:" destination="HXp-Ac-FC3" eventType="editingChanged" id="tPz-M0-t9z"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Black Cat" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMW-Te-Pff">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="typeTextFieldChanged:" destination="HXp-Ac-FC3" eventType="editingChanged" id="j0A-i0-OZM"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" image="pet7" translatesAutoresizingMaskIntoConstraints="NO" id="I1Z-gg-Wln">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="557"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pnH-AG-QcI" firstAttribute="leading" secondItem="iNP-Px-3wG" secondAttribute="leadingMargin" id="3kD-kl-PKG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pnH-AG-QcI" secondAttribute="trailing" id="3lQ-jh-GgJ"/>
+                            <constraint firstItem="fcN-YS-fhQ" firstAttribute="top" secondItem="pnH-AG-QcI" secondAttribute="bottom" constant="10" id="DUl-v9-R7F"/>
+                            <constraint firstItem="pnH-AG-QcI" firstAttribute="top" secondItem="lnJ-O7-tny" secondAttribute="bottom" id="lka-NZ-rGz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="I1Z-gg-Wln" id="V5I-3r-vH3"/>
+                        <outlet property="nameTextField" destination="8XB-6f-Vyd" id="5PB-BB-IEM"/>
+                        <outlet property="typeTextField" destination="NMW-Te-Pff" id="aI6-OB-tYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6e3-ZE-9ft" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pet7" width="100" height="100"/>
+    </resources>
+</document>
